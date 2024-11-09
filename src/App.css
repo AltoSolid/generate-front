@@ -1,0 +1,203 @@
+/* Fondo de la página */
+body {
+  background-color: #1e1e1e; /* Fondo oscuro para toda la página */
+  color: #f0f0f0; /* Texto claro */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Contenedor del formulario */
+.form-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 1.5rem;
+  background-color: #2e2e2e; /* Fondo oscuro para el formulario */
+  color: #f0f0f0; /* Texto claro */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Título del formulario */
+.form-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* Etiquetas del formulario */
+.form-label {
+  font-weight: bold;
+  color: #cfcfcf;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* Inputs del formulario */
+.form-input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background-color: #3a3a3a; /* Fondo oscuro para inputs */
+  color: #f0f0f0;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Grupo de radio buttons */
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.radio-group label {
+  color: #cfcfcf;
+  margin-bottom: 0.75rem;
+}
+
+/* Botón del formulario */
+.form-button {
+  padding: 0.75rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+.form-button:hover {
+  background-color: #0056b3;
+}
+
+/* Mensajes de estado (éxito y error) */
+.message {
+  padding: 0.5rem;
+  margin-top: 1rem;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.message.success {
+  background-color: #28a745;
+  color: white;
+}
+
+.message.error {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Sección para el número de última boleta */
+.ticket-numbers {
+  margin-top: 1rem;
+  color: #b3b3b3;
+  text-align: center;
+}
+
+.ticket-numbers p {
+  margin: 0.25rem 0;
+}
+
+/* Estilo para la opción de Boleta D deshabilitada */
+.boleta-disabled {
+  color: #888888;
+  cursor: not-allowed;
+  position: relative;
+}
+
+/* Tooltip para Boleta D */
+.boleta-disabled:hover::after {
+  content: attr(title);
+  position: absolute;
+  background-color: #333;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 4px;
+  top: -10px;
+  left: 100%;
+  white-space: nowrap;
+  font-size: 0.875rem;
+  margin-left: 0.5rem; /* Separación del tooltip respecto al texto */
+  z-index: 1;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateX(10px); /* Ajuste para evitar que el tooltip afecte al contenedor */
+  display: inline-block;
+}
+
+/* Botón de cerrar sesión */
+.logout-button {
+  margin: 1rem auto; /* Espaciado */
+  display: block;
+  width: fit-content; /* Ajuste al contenido */
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff; /* Texto claro */
+  background-color: #A020F0; /* Morado */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+.logout-button:hover {
+  background-color: #9018d9; /* Morado más oscuro al pasar el mouse */
+  transform: scale(1.05); /* Efecto de aumento */
+}
+
+.logout-button:active {
+  background-color: #7a14b0; /* Morado más intenso al hacer clic */
+  transform: scale(0.95); /* Efecto de reducción */
+}
+
+.logout-button:focus {
+  outline: 2px solid #f8d7da; /* Borde claro para accesibilidad */
+}
+
+/* Ajustes para "Generar múltiples boletas" */
+.multiple-tickets {
+  display: flex;
+  flex-direction: column; /* Asegura alineación vertical */
+  gap: 0.5rem; /* Espaciado entre elementos */
+  align-items: flex-start; /* Asegura que los elementos estén alineados a la izquierda */
+}
+
+.multiple-tickets label {
+  display: flex;
+  align-items: center; /* Alinea el texto con el checkbox */
+  gap: 0.5rem; /* Espaciado entre el checkbox y el texto */
+}
+
+.multiple-tickets select {
+  width: 100%; /* Asegura que el select ocupe todo el ancho disponible */
+  max-width: 200px; /* Limita el ancho máximo */
+  padding: 0.5rem;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background-color: #3a3a3a;
+  color: #f0f0f0;
+}
+
+.multiple-tickets p {
+  margin: 0;
+  font-size: 0.875rem; /* Texto más pequeño */
+  color: #b3b3b3; /* Color gris claro */
+  text-align: left; /* Alinea el texto a la izquierda */
+  line-height: 1.4; /* Mejora la legibilidad del texto */
+  white-space: normal; /* Permite que el texto se divida en varias líneas */
+  max-width: 100%; /* No permite que el texto exceda el ancho del contenedor */
+}
